@@ -1,0 +1,12 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.smmc.vyrl.config.DataSourceConfig",
+      "name": "spring.datasource",
+      "sourceMethod": "dataSource()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": []
+}

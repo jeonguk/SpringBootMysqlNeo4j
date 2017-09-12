@@ -1,0 +1,83 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: SpringBootMysqlNeo4j
+
+  http:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
+    neo4j:
+      username: neo4j
+      password: vyrl2
+      session:
+        scope: session
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vyrl2?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: root
+    password: jeonguk
+    platform: mysql
+    initial-size: 1
+    max-active: 1
+    max-idle: 1
+    min-idle: 1
+    test-on-borrow: true
+    validation-query: SELECT 1
+    tomcat:
+      max-wait: 20000
+      max-active: 50
+      max-idle: 20
+      min-idle: 15
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        id:
+          new_generator_mappings: false
+        format_sql: true
+        globally_quoted_identifiers: true
+    database: MYSQL
+    generate-ddl: false
+    show-sql: false
+    format-sql: true
+    use-sql-comments: true
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      ddl-auto: none
+
+
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+    default-property-inclusion: NON_NULL
+
+
+logging:
+  level:
+    org.springframework.web: INFO
+    com.smmc.vyrl: DEBUG
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql: TRACE
+
+  #pattern:
+  #  file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  #file: /Users/jeonguk/PROJECT/logs/vyrl2_cms.log
