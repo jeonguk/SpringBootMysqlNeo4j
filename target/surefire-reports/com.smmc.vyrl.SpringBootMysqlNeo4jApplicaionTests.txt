@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.smmc.vyrl.SpringBootMysqlNeo4jApplicaionTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.418 sec - in com.smmc.vyrl.SpringBootMysqlNeo4jApplicaionTests
